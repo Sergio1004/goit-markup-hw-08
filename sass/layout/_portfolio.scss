@@ -1,0 +1,131 @@
+.portfolio {
+  padding-top: 94px;
+  padding-bottom: 94px;
+
+  &-nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+
+    &-item:not(:last-child) {
+      margin-right: 8px;
+    }
+  }
+
+  &-button {
+    border: none;
+    border-radius: 4px;
+    padding: 6px 22px;
+
+    @include font($fw: 500, $fs: 16px, $lh: 1.625);
+    // font-weight: 500;
+    // font-size: 16px;
+    // line-height: 1.625;
+    // letter-spacing: 0.03em;
+    text-align: center;
+
+    color: var(--title-color);
+    cursor: pointer;
+
+    transition: background-color var(--animation), color var(--animation);
+
+    &:focus,
+    &:hover,
+    &:active {
+      color: var(--second-color);
+      background: var(--accent-color);
+      outline: none;
+    }
+  }
+
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+
+    &-item {
+      background: #ffffff;
+      border: 1px solid #eeeeee;
+      margin-right: 30px;
+      margin-bottom: 30px;
+      max-width: 370px;
+    }
+
+    &-item:nth-child(3n + 3) {
+      margin-right: 0px;
+    }
+
+    &-item:nth-child(n + 7) {
+      margin-bottom: 0px;
+    }
+  }
+
+  &-link {
+    display: block;
+    text-decoration: none;
+
+    transition: box-shadow var(--animation);
+
+    &:focus,
+    &:hover {
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+        0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+  }
+
+  &-img-wrapper {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    padding: 63px 24px;
+
+    @include font($fs: 18px, $lh: 1.556);
+    // font-weight: 400;
+    // font-size: 18px;
+    // line-height: 1.556;
+    // letter-spacing: 0.03em;
+
+    color: var(--second-color);
+    background-color: rgba(33, 150, 243, 0.9);
+
+    transform: translateY(100%);
+    transition: transform var(--animation);
+
+    .portfolio-link:hover &,
+    .portfolio-link:focus & {
+      transform: translateY(0%);
+    }
+  }
+
+  &-card {
+    padding: 20px 24px;
+  }
+
+  &-title {
+    margin-bottom: 4px;
+
+    @include font($fw: 700, $fs: 18px, $lh: 2, $ls: 0.06em);
+    // font-weight: 700;
+    // font-size: 18px;
+    // line-height: 2;
+    // letter-spacing: 0.06em;
+    color: var(--title-color);
+  }
+
+  &-description {
+    margin-top: 0px;
+    margin-bottom: 0px;
+
+    @include font($fs: 16px, $lh: 1.875);
+    // font-weight: 400;
+    // font-size: 16px;
+    // line-height: 1.875;
+    // letter-spacing: 0.03em;
+    color: var(--main-color);
+  }
+}

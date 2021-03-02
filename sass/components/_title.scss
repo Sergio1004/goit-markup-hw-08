@@ -1,0 +1,11 @@
+.title {
+  margin-bottom: 50px;
+
+  @include font($fw: 700, $fs: 36px, $lh: 1.167);
+  // font-weight: 700;
+  // font-size: 36px;
+  // line-height: 1.167;
+  // letter-spacing: 0.03em;
+  text-align: center;
+  color: var(--title-color);
+}

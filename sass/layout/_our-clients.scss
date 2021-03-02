@@ -1,0 +1,38 @@
+.our-clients {
+  padding-top: 94px;
+  padding-bottom: 94px;
+
+  &-list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 90px;
+    border: 1px solid var(--icon-color);
+    border-radius: 4px;
+
+    transition: border-color var(--animation);
+
+    &:focus,
+    &:hover {
+      border-color: var(--accent-color);
+      outline: none;
+    }
+  }
+
+  &-icon {
+    fill: var(--icon-color);
+
+    transition: fill var(--animation);
+
+    .our-clients-link:hover &,
+    .our-clients-link:focus & {
+      fill: var(--accent-color);
+    }
+  }
+}
