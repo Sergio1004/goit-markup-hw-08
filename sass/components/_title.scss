@@ -1,11 +1,23 @@
 .title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 
-  @include font($fw: 700, $fs: 36px, $lh: 1.167);
+  @include font($fw: 700, $fs: 28px, $lh: 1.178);
   // font-weight: 700;
-  // font-size: 36px;
-  // line-height: 1.167;
+  // font-size: 28px;
+  // line-height: 1.178;
   // letter-spacing: 0.03em;
   text-align: center;
   color: var(--title-color);
 }
+
+// .title {
+//   margin-bottom: 50px;
+
+//   @include font($fw: 700, $fs: 36px, $lh: 1.167);
+//   // font-weight: 700;
+//   // font-size: 36px;
+//   // line-height: 1.167;
+//   // letter-spacing: 0.03em;
+//   text-align: center;
+//   color: var(--title-color);
+// }

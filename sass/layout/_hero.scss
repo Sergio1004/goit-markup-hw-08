@@ -1,6 +1,5 @@
 .hero {
   max-width: 1600px;
-  max-height: 600px;
   background-image: linear-gradient(
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
@@ -13,28 +12,31 @@
 
   &-content {
     display: flex;
-    width: 696px;
     flex-direction: column;
     align-items: center;
-    padding: 200px 0px;
+    padding: 118px 0px;
   }
   &-title {
     margin-bottom: 30px;
 
-    @include font($fw: 900, $fs: 44px, $lh: 1.364, $ls: 0.06em);
-    // font-weight: 900;
-    // font-size: 44px;
-    // line-height: 1.364;
-    // letter-spacing: 0.06em;
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 1.615;
+
     text-align: center;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
+
     color: var(--second-color);
   }
 
   &-button {
-    min-width: 200px;
+    width: 200px;
     height: 50px;
-    padding: 10px 32px;
+
+    background: #2196f3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
 
     border: none;
     background: var(--accent-color);
@@ -52,3 +54,37 @@
     cursor: pointer;
   }
 }
+//   &-title {
+//     margin-bottom: 30px;
+
+//     @include font($fw: 900, $fs: 44px, $lh: 1.364, $ls: 0.06em);
+//     // font-weight: 900;
+//     // font-size: 44px;
+//     // line-height: 1.364;
+//     // letter-spacing: 0.06em;
+//     text-align: center;
+//     text-transform: uppercase;
+//     color: var(--second-color);
+//   }
+
+//   &-button {
+//     min-width: 200px;
+//     height: 50px;
+//     padding: 10px 32px;
+
+//     border: none;
+//     background: var(--accent-color);
+
+//     @include font($fw: 700, $fs: 16px, $lh: 1.875, $ls: 0.06em);
+//     // font-weight: 700;
+//     // font-size: 16px;
+//     // line-height: 1.875;
+//     // letter-spacing: 0.06em;
+//     align-items: center;
+//     text-align: center;
+//     color: var(--second-color);
+//     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+//     border-radius: 4px;
+//     cursor: pointer;
+//   }
+// }
