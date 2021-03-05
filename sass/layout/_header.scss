@@ -53,6 +53,10 @@
 
   background-color: var(--second-color);
 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
   padding: 48px 40px;
   overflow-y: scroll;
 }
@@ -63,7 +67,7 @@
 }
 
 .mobile-menu-nav {
-  margin-bottom: 302px;
+  margin-bottom: 32px;
 }
 
 .mobile-menu-nav-item:not(:last-child) {
@@ -145,10 +149,6 @@
 }
 
 @media screen and (max-width: 479px) {
-  .mobile-menu-nav {
-    margin-bottom: 80px;
-  }
-
   .mobile-menu-address-tel-link {
     font-size: 24px;
     line-height: 1.167;
