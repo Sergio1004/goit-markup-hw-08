@@ -152,7 +152,7 @@
 }
 
 .form-title {
-  @include font($fw: 700, $fs: 20px, $lh: 1.15);
+  @include font($fw: 700, $fs: 20px, $lh: 1.5);
   // font-weight: 700;
   // font-size: 20px;
   // line-height: 1.15;
@@ -188,4 +188,10 @@
 
 .policy-link {
   color: var(--accent-color);
+}
+
+@media screen and (min-width: 1200px) {
+  .form-title {
+    @include font($fw: 700, $fs: 20px, $lh: 1.15);
+  }
 }

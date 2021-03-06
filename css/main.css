@@ -80,12 +80,17 @@ p {
   .footer > .container {
     display: flex;
     align-items: baseline;
+    flex-wrap: wrap;
+    justify-content: space-around;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .container {
     width: 1200px;
+  }
+  .footer > .container {
+    justify-content: space-between;
   }
 }
 
@@ -103,6 +108,16 @@ p {
   color: var(--title-color);
 }
 
+@media screen and (min-width: 1200px) {
+  .title {
+    margin-bottom: 50px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.167;
+    letter-spacing: 0.03em;
+  }
+}
+
 .backdrop {
   position: fixed;
   background-color: rgba(0, 0, 0, 0.2);
@@ -115,15 +130,12 @@ p {
 
 .modal {
   position: absolute;
-  width: 95%;
-  max-width: 450px;
-  height: 95%;
-  max-height: 609px;
+  width: 528px;
+  height: 581px;
   top: 50%;
   left: 50%;
   padding: 40px;
   transform: translate(-50%, -50%);
-  overflow: scroll;
   background-color: var(--second-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -162,10 +174,13 @@ p {
   pointer-events: none;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (max-width: 1199px) {
   .modal {
-    width: 528px;
-    min-height: 581px;
+    width: 95%;
+    max-width: 450px;
+    height: 95%;
+    max-height: 609px;
+    overflow: scroll;
   }
 }
 
@@ -724,20 +739,15 @@ p {
 
 .our-clients-item {
   margin: 15px;
-}
-
-@media screen and (min-width: 480px) {
-  .our-clients-item {
-    width: calc((100% - 4 * 15px) / 2);
-  }
+  height: 90px;
+  width: calc((100% - 4 * 15px) / 2);
 }
 
 .our-clients-link {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 210px;
-  height: 90px;
+  height: 100%;
   border: 1px solid var(--icon-color);
   border-radius: 4px;
   transition: border-color var(--animation);
@@ -758,10 +768,19 @@ p {
   fill: var(--accent-color);
 }
 
-@media screen and (max-width: 479px) {
-  .our-clients-list {
-    margin: 0%;
-    justify-content: center;
+@media screen and (min-width: 768px) {
+  .our-clients-item {
+    width: calc((100% - 6 * 15px) / 3);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .our-clients {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+  .our-clients-item {
+    width: calc((100% - 12 * 15px) / 6);
   }
 }
 
@@ -899,6 +918,35 @@ p {
   margin-left: 10px;
 }
 
+@media screen and (min-width: 768px) {
+  .footer-contacts-wrapper {
+    margin-bottom: 60px;
+  }
+  .footer-social-wrapper {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .footer-subscribe-input {
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer {
+    text-align: start;
+  }
+  .footer-contacts-wrapper {
+    margin-bottom: 0px;
+  }
+  .footer-button-wrapper {
+    flex-direction: row;
+  }
+  .footer-subscribe-input {
+    width: 358px;
+    margin-right: 12px;
+  }
+}
+
 .portfolio {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -911,7 +959,7 @@ p {
   margin-top: -4px;
   margin-right: -4px;
   margin-left: -4px;
-  margin-bottom: 36px;
+  margin-bottom: 40px;
 }
 
 .portfolio-nav-item {
@@ -939,10 +987,14 @@ p {
   outline: none;
 }
 
+.portfolio-list {
+  margin: -15px;
+}
+
 .portfolio-list-item {
   background: #ffffff;
   border: 1px solid #eeeeee;
-  margin-bottom: 30px;
+  margin: 15px;
   max-width: 450px;
 }
 
@@ -1003,6 +1055,33 @@ p {
   line-height: 1.875;
   letter-spacing: 0.03em;
   color: var(--main-color);
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio-nav {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  .portfolio-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .portfolio-list-item {
+    width: calc((100% - 4 * 15px) / 2);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+  .portfolio-nav {
+    margin-bottom: 50px;
+  }
+  .portfolio-list-item {
+    width: calc((100% - 6 * 15px) / 3);
+  }
 }
 
 .modal-form {
@@ -1144,7 +1223,7 @@ p {
 .form-title {
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   letter-spacing: 0.03em;
   text-align: center;
   margin-bottom: 6px;
@@ -1172,5 +1251,14 @@ p {
 
 .policy-link {
   color: var(--accent-color);
+}
+
+@media screen and (min-width: 1200px) {
+  .form-title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    letter-spacing: 0.03em;
+  }
 }
 /*# sourceMappingURL=main.css.map */

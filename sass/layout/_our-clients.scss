@@ -11,17 +11,15 @@
 
   &-item {
     margin: 15px;
-    @media screen and (min-width: 480px) {
-      width: calc((100% - 4 * 15px) / 2);
-    }
+    height: 90px;
+    width: calc((100% - 4 * 15px) / 2);
   }
 
   &-link {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 210px;
-    height: 90px;
+    height: 100%;
     border: 1px solid var(--icon-color);
     border-radius: 4px;
 
@@ -45,10 +43,19 @@
   }
 }
 
-@media screen and (max-width: 479px) {
-  .our-clients-list {
-    margin: 0%;
-    justify-content: center;
+@media screen and (min-width: 768px) {
+  .our-clients-item {
+    width: calc((100% - 6 * 15px) / 3);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .our-clients {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+  .our-clients-item {
+    width: calc((100% - 12 * 15px) / 6);
   }
 }
 

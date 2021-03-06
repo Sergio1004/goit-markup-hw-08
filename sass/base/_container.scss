@@ -28,6 +28,8 @@
     .footer > & {
       display: flex;
       align-items: baseline;
+      flex-wrap: wrap;
+      justify-content: space-around;
     }
   }
 }
@@ -35,6 +37,10 @@
 @media screen and (min-width: 1200px) {
   .container {
     width: 1200px;
+
+    .footer > & {
+      justify-content: space-between;
+    }
   }
 }
 

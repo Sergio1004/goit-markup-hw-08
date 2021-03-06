@@ -10,6 +10,14 @@
   color: var(--title-color);
 }
 
+@media screen and (min-width: 1200px) {
+  .title {
+    margin-bottom: 50px;
+
+    @include font($fw: 700, $fs: 36px, $lh: 1.167);
+  }
+}
+
 // .title {
 //   margin-bottom: 50px;
 
