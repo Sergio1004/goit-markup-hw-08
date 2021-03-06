@@ -86,7 +86,11 @@
     // font-size: 18px;
     // line-height: 1.556;
     // letter-spacing: 0.03em;
-
+    
+    @media screen and (max-width: 479px) {
+      @include font($fs: 13px, $lh: 1.556);
+    }
+    
     color: var(--second-color);
     background-color: rgba(33, 150, 243, 0.9);
 
