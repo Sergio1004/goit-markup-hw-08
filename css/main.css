@@ -662,6 +662,9 @@ p {
 }
 
 @media screen and (min-width: 1200px) {
+  .hero-content {
+    padding: 200px 0;
+  }
   .hero-title {
     font-size: 44px;
     line-height: 1.364;
