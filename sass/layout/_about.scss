@@ -35,6 +35,7 @@
 
   &-description {
     @include font;
+    margin-bottom: 30px;
     // font-weight: 400;
     // font-size: 14px;
     // line-height: 1.714;
@@ -60,6 +61,12 @@
       width: calc((100% - 4 * 15px) / 2);
 
       margin: 15px;
+    }
+    &-title {
+      text-align: start;
+    }
+    &-description {
+      margin-bottom: 0px;
     }
   }
 }
